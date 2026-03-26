@@ -1,0 +1,170 @@
+%-------------------------
+% Resume in Latex
+% Author : Audric Serador
+% Inspired by: /resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{fontawesome5}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{graphicx}
+
+\input{glyphtounicode}
+
+% Custom font
+\usepackage[default]{lato}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%-------------------------%
+% Custom commands
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------%
+%%%%%%  RESUME STARTS HERE  %%%%%
+
+\begin{document}
+
+%----------HEADING----------%
+\begin{center}
+    {\Huge \scshape Pogiri Dhanalaxmi} \\ \vspace{4pt}
+    \small
+    \faPhone\ +91-XXXXXXXXXX \hspace{2pt} $|$ \hspace{2pt}
+    \faEnvelope\ \href{mailto:dhanalaxmi@email.com}{dhanalaxmi@email.com} \hspace{2pt} $|$ \hspace{2pt}
+    \faLinkedin\ \href{https://linkedin.com/in/pogiridhanalakshmi}{linkedin.com/in/pogiridhanalakshmi} \hspace{2pt} $|$ \hspace{2pt}
+    \faGithub\ \href{https://github.com/pogiridhanalakshmi}{github.com/pogiridhanalakshmi}
+\end{center}
+
+%-----------EDUCATION-----------%
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {[Your University Name]}{[City, State]}
+      {Bachelor of Technology in Computer Science / Information Technology}{[Month Year] -- [Month Year]}
+      \resumeItemListStart
+        \resumeItem{Relevant Coursework: Data Structures \& Algorithms, DBMS, Operating Systems, Web Technologies, Software Engineering}
+        \resumeItem{CGPA: X.XX / 10.0}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------%
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Python Full Stack Developer Intern}{[Month Year] -- [Month Year]}
+      {[Company Name]}{[City, State / Remote]}
+      \resumeItemListStart
+        \resumeItem{Developed and maintained RESTful APIs using \textbf{Django REST Framework}, reducing average API response time by 30\% through query optimization and caching}
+        \resumeItem{Built reusable \textbf{React} components and integrated them with backend APIs using \textbf{Axios}, improving UI consistency across 5+ pages}
+        \resumeItem{Implemented \textbf{JWT-based authentication} with refresh token rotation, securing 10+ protected endpoints and ensuring session persistence across page reloads}
+        \resumeItem{Collaborated in an Agile team using Git, participated in daily standups, code reviews, and sprint planning}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------%
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{ShopEase -- Full Stack E-Commerce Platform} $|$
+       \emph{Django, DRF, React, Redux Toolkit, JWT, SQLite} $|$
+       \href{https://github.com/pogiridhanalakshmi/shopease-ecommerce}{\faGithub\ GitHub}}
+      {2026}
+      \resumeItemListStart
+        \resumeItem{Built a full-stack e-commerce platform using \textbf{Django REST Framework} and \textbf{React 19 + Vite}, implementing \textbf{JWT-based authentication} with access/refresh token rotation, role-based access, and a persistent per-user shopping cart backed by \textbf{SQLite}}
+        \resumeItem{Developed \textbf{10+ RESTful API endpoints} with search, category, and price filters; integrated \textbf{Redux Toolkit} for global state management across cart and auth flows, and used \textbf{Axios interceptors} for automatic token refresh on 401 responses}
+        \resumeItem{Designed complete end-to-end purchase flow — product catalog, cart management, checkout with order placement, order history tracking — and deployed a \textbf{Django admin panel} for content management with seed data of 12 products across 5 categories}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Personal Finance Tracker} $|$
+       \emph{Python, Flask/Django, SQLite, Chart.js, Bootstrap}}
+      {2025}
+      \resumeItemListStart
+        \resumeItem{Developed a web application to track income and expenses with \textbf{category-wise breakdown}, enabling users to visualize monthly spending trends using \textbf{Chart.js} interactive charts}
+        \resumeItem{Implemented \textbf{user authentication}, CSV export functionality, and responsive UI using \textbf{Bootstrap} with mobile-first design principles}
+        \resumeItem{Designed normalized \textbf{SQLite} database schema with proper relationships between users, transactions, and categories; used \textbf{Django ORM} for efficient query management}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------%
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages:}\hspace{4pt} Python, JavaScript (ES6+), SQL, HTML5, CSS3 \\[3pt]
+     \textbf{Backend:}\hspace{8pt} Django, Django REST Framework, Flask, RESTful APIs, JWT Authentication \\[3pt]
+     \textbf{Frontend:}\hspace{6pt} React.js, Redux Toolkit, React Router, Axios, Bootstrap, Tailwind CSS \\[3pt]
+     \textbf{Databases:}\hspace{3pt} PostgreSQL, SQLite, MySQL, Django ORM, Alembic Migrations \\[3pt]
+     \textbf{Tools:}\hspace{16pt} Git, GitHub, Postman, VS Code, Docker (basics), Linux/Ubuntu \\[3pt]
+     \textbf{Concepts:}\hspace{5pt} REST API Design, MVC/MVT Architecture, CRUD Operations, CORS, Agile/Scrum
+    }}
+ \end{itemize}
+
+\end{document}
